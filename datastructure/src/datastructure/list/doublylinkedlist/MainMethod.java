@@ -26,14 +26,21 @@ public class MainMethod {
 		doublyLinkedList.addLast(10);
 		doublyLinkedList.addLast(20);
 		doublyLinkedList.addLast(30);
-		
-		DoublyLinkedList.ListIterator i = doublyLinkedList.listIterator();
-		i.add(40);
-		System.out.println(i.next());
-		i.add(50);
-		System.out.println(i.next());
-		System.out.println(i.next());
 		System.out.println(doublyLinkedList);
+		doublyLinkedList.add(2, 40);
+		
+		System.out.println(doublyLinkedList);
+		
+		System.out.println(doublyLinkedList.get(2));
+		
+//		DoublyLinkedList.ListIterator i = doublyLinkedList.listIterator();
+//		i.add(40);
+//		System.out.println(i.next());
+//		i.add(50);
+//		System.out.println(i.next());
+//		System.out.println(i.next());
+//		System.out.println(i.next());
+//		System.out.println(doublyLinkedList);
 
 	}
 

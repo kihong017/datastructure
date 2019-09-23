@@ -50,13 +50,14 @@ public class DoublyLinkedList {
 	}
 	
 	Node node(int index) {
-		Node x = head;
-		
+		Node x;
 		if ( index < size/2 ) {
+			x = head;
 			for (int i = 0; i < index; i++) {
 				x = x.next;
 			}			
 		} else {
+			x = tail;
 			for (int i = size-1; i > index; i--) {
 				x = x.prev;
 			}			
@@ -68,6 +69,8 @@ public class DoublyLinkedList {
 	public void add(int index, Object input) {
 		if (index == 0) {
 			addFirst(input);
+		} else if (index == size-1) {
+			addLast(input);
 		} else {
 			Node oldNode1 = node(index-1);
 			Node oldNode2 = oldNode1.next;
