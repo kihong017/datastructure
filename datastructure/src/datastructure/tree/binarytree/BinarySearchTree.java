@@ -12,13 +12,41 @@ public class BinarySearchTree {
 		}
 	}
 
+	public Integer getSmallest() {
+		
+		if (root != null) {
+			return root.getSmallest();
+		} else {
+			return null;
+		}
+		
+	}
+	
+	public Integer getLargest() {
+		
+		if (root != null) {
+			return root.getLargest();
+		} else {
+			return null;
+		}
+		
+	}
+	
 	public TreeNode find(Integer data) {
 
-		if (root != null) {
+		if (null != root) {
 			return root.find(data);
 		}
 		
 		return null;
+	}
+	
+	public void traverseInOrder() {
+		
+		if (null != root) {
+			root.traverseInOrder();
+		}
+		System.out.println();
 	}
 	
 	public void delete(Integer data) {

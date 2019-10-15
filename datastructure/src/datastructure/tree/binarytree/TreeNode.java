@@ -11,6 +11,26 @@ public class TreeNode {
 		this.data = data;
 	}
 	
+	public Integer getSmallest() {
+		
+		if (null == this.leftChild) {
+			return data;
+		} else {
+			return this.leftChild.getSmallest();
+		}
+		
+	}
+	
+	public Integer getLargest() {
+		
+		if (null == this.rightChild) {
+			return data;
+		} else {
+			return this.rightChild.getLargest();
+		}
+		
+	}
+	
 	public TreeNode find(Integer data) {	
 		if (data < this.data && null != leftChild) {
 			return leftChild.find(data);
@@ -20,6 +40,16 @@ public class TreeNode {
 			return this;
 		} else {
 			return null;
+		}
+	}
+	
+	public void traverseInOrder() {
+		if (null != this.leftChild) {
+			this.leftChild.traverseInOrder();
+		}
+		System.out.print(this.toString() + " ");
+		if (null != this.rightChild) {
+			this.rightChild.traverseInOrder();
 		}
 	}
 	
@@ -59,4 +89,8 @@ public class TreeNode {
 		this.rightChild = rightChild;
 	}
 
+	@Override
+	public String toString() {
+		return String.valueOf(this.data);
+	}
 }
