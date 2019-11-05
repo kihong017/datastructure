@@ -1,4 +1,4 @@
-package datastructure.list.heap;
+package datastructure.heap;
 
 import java.util.Arrays;
 

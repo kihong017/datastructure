@@ -1,4 +1,4 @@
-package datastructure.list.queue;
+package datastructure.queue;
 
 public class Queue {
 	

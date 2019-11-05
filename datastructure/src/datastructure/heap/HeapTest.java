@@ -1,4 +1,4 @@
-package datastructure.list.heap;
+package datastructure.heap;
 
 public class HeapTest {
 
