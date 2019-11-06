@@ -2,6 +2,11 @@ package datastructure.heap;
 
 import java.util.Arrays;
 
+/*
+ * Originally from Linkedin Learning
+ * By Raghavendra Dixit
+ */
+
 public class Heap {
 	private Integer[] heapData;
 	private int currentPosition = -1;
